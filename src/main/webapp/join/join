@@ -1,0 +1,6 @@
+一：访问加盟商的首页：Cloth/join/selectAllToList.action
+二：访问加盟商退货表首页： http://localhost:8080/Cloth/joiningTraderReturn/selectAllByPager.action
+三：访问尺寸首页：http://localhost:8080/Cloth/size/sizeIndex.jsp
+四：让加盟商通过审核：join/passVerify.action  “通过审核”
+五：不让加盟商通过审核：join/noPassVerify.action  “不通过”
+六：显示所有退换货信息：localReturn/queryLocalReturn.action
