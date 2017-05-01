@@ -3,12 +3,10 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
-    
     <title>服装分销后台登陆</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"></link>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -16,17 +14,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="js/cloud.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-
 <body style="background-color:#1c77ac; background-image:url(images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
-
-
-
     <div id="mainBody">
       <div id="cloud1" class="cloud"></div>
       <div id="cloud2" class="cloud"></div>
     </div>  
-
-
 <div class="logintop">    
     <span>欢迎登录服装后台管理平台</span>    
     <ul>
@@ -34,7 +26,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <li><a href="javascript:void(0);">关于</a></li>
     </ul>    
     </div>
-  
  <center>
  	 <div align="center" style="padding: 300px 200px 10px;width: 800px;" > 
       <div class="input-group input-group-lg">
@@ -50,12 +41,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  </center>
   <center>
  	<font id="msg_" ><strong id='msg' ></strong></font><br><br/><br/>
-  	<button id='login' type="button" class="btn btn-success">登陆</button>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<button id='login' type="button" class="btn btn-success">登录</button>&nbsp;&nbsp;&nbsp;&nbsp;
   	<button type="button" class="btn btn-success">注册</button>
   </center>
 <script type="text/javascript">
 	$(function(){
-		//登陆
+		//登录
 		$("#login").click(function(){
 			//得到用户名账号密码
 			var $name=$("#userName");
@@ -75,21 +66,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				}
 			}
 			else{
-				//登陆
-				
+				//登录
 				$.ajax({
 					url:'user/login.action',
 					data:{"userName":$name.val(),"userPwd":$pwd.val()},
 					type:"post",
 					success:function(res){
 						if(res=="0"){
-							$("#msg").html("登陆成功！");
+							$("#msg").html("登录成功！");
 							$("#msg_").attr("color","green");
 							$pwd.val("");
 							window.location.href='user/index.action';
 						}
 						else{
-							$("#msg").html("登陆失败！请检查用户名密码是否错误！");
+							$("#msg").html("登录失败！请检查用户名密码是否错误！");
 							$("#msg_").attr("color","red");
 						}
 					}
@@ -108,7 +98,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		})
 	});	
 </script>
-
     <div class="loginbm">版权所有归属  2016 个人版权所有</div>
 </body>
 </html>
